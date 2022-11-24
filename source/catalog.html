@@ -2,11 +2,11 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Мишка</title>
+    <title>Мишка: каталог товаров</title>
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="header__container">
+      <div class="container">
         <nav class="header__navigation navigation">
           <div class="navigation__menu">
             <div class="navigation__menu-links navigation__main-links">
@@ -54,131 +54,79 @@
       </div>
     </header>
     <main class="main">
-      <h1 class="visually-hidden">Главная страница магазина 'Мишка'.</h1>
-      <section class="hero">
-        <div class="hero__container">
-          <h2 class="visually-hidden">Введение со ссылками на наши товары.</h2>
-          <p class="hero__title">Милые штуки ручной работы для дома</p>
-          <ul class="hero__links">
-            <li class="hero__link-container">
-              <a class="hero__link hero__link--interior" href="./form.html">Предметы интерьера</a>
-            </li>
-            <li class="hero__link-container">
-              <a class="hero__link hero__link--toys" href="./form.html">Детские игрушки</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="best-product">
-        <div class="best-product__container">
-          <h2 class="visually-hidden">Заказать наш лучший товар.</h2>
-          <div class="best-product__title-container">
-            <p class="best-product__name">Вязаные корзинки</p>
-            <p class="best-product__time-range">Товар недели</p>
-          </div>
-          <p class="best-product__description">
-            Экологически чистая пряжа, ручная работа.
-            Доступны в&nbsp;шести расцветках и&nbsp;трёх размерах.
-          </p>
-          <dl class="best-product__properties">
-            <div class="best-product__property">
-              <dt class="best-product__key">Цвет:</dt>
-              <dd class="best-product__value">тиффани/серый</dd>
-            </div>
-            <div class="best-product__property">
-              <dt class="best-product__key">Диаметр:</dt>
-              <dd class="best-product__value">25&nbsp;см</dd>
-            </div>
-            <div class="best-product__property">
-              <dt class="best-product__key">Высота:</dt>
-              <dd class="best-product__value">15&nbsp;см</dd>
-            </div>
-          </dl>
-          <picture class="best-product__picture">
-            <img class="best-product__image" width="525" height="636" src="#" alt="Три вязаных корзинки, которые стоят друг на друге.">
-          </picture>
-          <b class="best-product__price">Цена: 990&nbsp;руб.</b>
-          <button class="best-product__order button" type="button">Заказать</button>
-        </div>
-      </section>
-      <section class="about-us">
-        <div class="about-us__container">
-          <h2 class="about-us__title">Коротко о&nbsp;нас:</h2>
-          <ul class="about-us__list">
-            <li class="about-us__item about-us__item--pure-materials">
-              <p class="about-us__text">Экологически чистые материалы</p>
-            </li>
-            <li class="about-us__item about-us__item--tied-toy">
-              <p class="about-us__text">Связано вручную с&nbsp;любовью и&nbsp;умилением</p>
-            </li>
-            <li class="about-us__item about-us__item--scandinavian-style">
-              <p class="about-us__text">Скандинавский стиль по&nbsp;российской цене</p>
-            </li>
-            <li class="about-us__item about-us__item--support">
-              <p class="about-us__text">Поддержка отечественного производителя</p>
-            </li>
-            <li class="about-us__item about-us__item--likes">
-              <p class="about-us__text">Увеличивает лайки на&nbsp;фотографиях</p>
-            </li>
-            <li class="about-us__item about-us__item--gift-wrap">
-              <p class="about-us__text">Поставляется в&nbsp;подарочной упаковке</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="reviews">
-        <div class="reviews__container slider">
-          <h2 class="reviews__title">Отзывы</h2>
-          <ul class="reviews__list slider-wrapper">
-            <li class="reviews__item slider-slide">
-              <blockquote class="reviews__text">
-                Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали
-                и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек.
-                В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке,
-                и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!
-              </blockquote>
-              <cite class="reviews__source">Анастасия Красильникова</cite>
-              <p class="reviews__id">@misssssiskras</p>
-            </li>
-          </ul>
-          <div class="reviews__buttons">
-            <button class="reviews__button reviews__button--prev slider-button-prev link" type="button">
-              <span class="visually-hidden">Нажми, чтобы перейти на прошлый отзыв.</span>
-            </button>
-            <button class="reviews__button reviews__button--next slider-button-next link" type="button">
-              <span class="visually-hidden">Нажми, чтобы перейти на следующий отзыв.</span>
-            </button>
-          </div>
-          <a class="reviews__writing-button button" href="#">Написать</a>
-        </div>
-      </section>
-      <div class="main__two-block-container">
-        <section class="contacts">
-          <div class="contacts__container">
-            <div class="contacts__text-container">
-              <h2 class="contacts__title">Контакты</h2>
-              <address class="contacts__address">
-                <div class="contacts__email-container">
-                  <p class="contacts__email-label">e-mail:</p>
-                  <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-                </div>
-                <div class="contacts__location-container">
-                  <p class="contacts__location-label">адрес:</p>
-                  <p class="contacts__location-text">
-                    г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101
-                  </p>
-                </div>
-              </address>
-            </div>
-            <div class="contacts__map-container">
-              <picture class="contacts__map-picture">
-                <img class="contacts__map-image" width="527" height="457" src="#" alt="Карта того, где находиться наш магазин.">
+      <h1 class="main__title">Каталог товаров</h1>
+      <section class="goods">
+        <h2>Список товаров.</h2>
+        <div class="goods__container">
+          <ul class="goods__list">
+            <li class="goods__item">
+              <picture class="goods__picture">
+                <img class="goods__image" width="316" height="462" src="#" alt="Зайчик, связаный из ниток.">
               </picture>
-            </div>
-            <a class="contacts__link button" href="#">Напишите нам</a>
+              <div class="goods__text">
+                <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+                <p class="goods__description">Рост 30&nbsp;см, вес 200&nbsp;г</p>
+                <div class="goods__price-container">
+                  <b class="goods__price">1&nbsp;200&nbsp;руб.</b>
+                  <button class="goods__buy" type="button">
+                    <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M19.2 7.2h-3.4L12.6.4c-.2-.4-.6-.5-1-.3s-.5.6-.3 1l3 6.1H5.5l3-6c.2-.5 0-.9-.3-1.1-.4-.2-.8 0-1 .3L4 7.2H.8c-.4 0-.8.3-.8.8 0 .4.3.8.8.8H1l.8 3c-.2.2-.3.4-.3.7 0 .4.3.7.7.7L4 19H16l1.7-5.8c.4 0 .7-.3.7-.7 0-.2-.1-.5-.3-.6l.8-3h.2c.4 0 .8-.4.8-.9s-.4-.8-.8-.8ZM15 17.4h-10L3.6 13H16L15 17.4Zm1.5-5.8H3.2l-.8-2.9h14.8l-.8 2.9Z" fill="currentColor"/></svg>
+                    <span class="visually-hidden">Нажми, чтобы добавить товар в корзину.</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="goods__item">
+              <picture class="goods__picture">
+                <img class="goods__image" width="316" height="462" src="#" alt="Корзинка из ниток в которой лежит бельё.">
+              </picture>
+              <div class="goods__text">
+                <h3 class="goods__title">Корзинка для белья</h3>
+                <p class="goods__description">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
+                <div class="goods__price-container">
+                  <b class="goods__price">690&nbsp;руб.</b>
+                  <button class="goods__buy" type="button">
+                    <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M19.2 7.2h-3.4L12.6.4c-.2-.4-.6-.5-1-.3s-.5.6-.3 1l3 6.1H5.5l3-6c.2-.5 0-.9-.3-1.1-.4-.2-.8 0-1 .3L4 7.2H.8c-.4 0-.8.3-.8.8 0 .4.3.8.8.8H1l.8 3c-.2.2-.3.4-.3.7 0 .4.3.7.7.7L4 19H16l1.7-5.8c.4 0 .7-.3.7-.7 0-.2-.1-.5-.3-.6l.8-3h.2c.4 0 .8-.4.8-.9s-.4-.8-.8-.8ZM15 17.4h-10L3.6 13H16L15 17.4Zm1.5-5.8H3.2l-.8-2.9h14.8l-.8 2.9Z" fill="currentColor"/></svg>
+                    <span class="visually-hidden">Нажми, чтобы добавить товар в корзину.</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="goods__item">
+              <picture class="goods__picture">
+                <img class="goods__image" width="316" height="462" src="#" alt="Корзинка с игрушками.">
+              </picture>
+              <div class="goods__text">
+                <h3 class="goods__title">Большая корзинка для игрушек</h3>
+                <p class="goods__description">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
+                <div class="goods__price-container">
+                  <b class="goods__price">1&nbsp;500&nbsp;руб.</b>
+                  <button class="goods__buy" type="button">
+                    <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M19.2 7.2h-3.4L12.6.4c-.2-.4-.6-.5-1-.3s-.5.6-.3 1l3 6.1H5.5l3-6c.2-.5 0-.9-.3-1.1-.4-.2-.8 0-1 .3L4 7.2H.8c-.4 0-.8.3-.8.8 0 .4.3.8.8.8H1l.8 3c-.2.2-.3.4-.3.7 0 .4.3.7.7.7L4 19H16l1.7-5.8c.4 0 .7-.3.7-.7 0-.2-.1-.5-.3-.6l.8-3h.2c.4 0 .8-.4.8-.9s-.4-.8-.8-.8ZM15 17.4h-10L3.6 13H16L15 17.4Zm1.5-5.8H3.2l-.8-2.9h14.8l-.8 2.9Z" fill="currentColor"/></svg>
+                    <span class="visually-hidden">Нажми, чтобы добавить товар в корзину.</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="presentation">
+        <div class="presentation-container">
+          <h2 class="visually-hidden">Видео с процессом производства</h2>
+          <div class="presentation__video-container">
+            <picture class="presentation__picture">
+              <!-- Картинка вместо видео -->
+              <img class="presentation__image" width="683" height="455" src="#" alt="Видео с процессом производства.">
+            </picture>
+            <p class="presentation__title">Процесс производства</p>
+            <p class="presentation__text">
+              По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли
+              для вас подробное видео о&nbsp;том, как появляются наши товары.
+            </p>
+            <button class="presentation__button" type="button">Сделать заказ</button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
