@@ -1,5 +1,11 @@
-.header__container {
+.header {
   position: relative;
+}
+
+.header__container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 
   .container-width;
   min-height: 80px;
@@ -11,16 +17,9 @@
   right: 0;
   left: 0;
   z-index: 1;
-
-  opacity: 0;
 }
 
 .header__burger {
-  position: absolute;
-  top: 50%;
-  right: 0;
-
-  transform: translateY(-50%);
   width: 20px;
   height: 14px;
 }
