@@ -1,1 +1,48 @@
-// empty
+.presentation__container {
+  display: flex;
+  flex-direction: column;
+
+  .container-width;
+  border-bottom: 1px solid @border-color;
+  margin-bottom: 58px;
+}
+
+.presentation__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: @bold-text-color;
+
+  margin: 0;
+  margin-left: 91px;
+  margin-bottom: 27px;
+  order: -1;
+}
+
+.presentation__video-mobile {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  margin-bottom: 35px;
+
+  // tempolarity
+  @media (min-width: 600px) {
+    width: 400px;
+  }
+}
+
+.presentation__text {
+  font-size: 13px;
+  line-height: 24px;
+
+  padding-left: 34px;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.presentation__button {
+  align-self: center;
+
+  margin-bottom: 33px;
+}
