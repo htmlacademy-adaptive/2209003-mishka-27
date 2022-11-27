@@ -1,0 +1,70 @@
+.goods__container {
+  .container-width;
+}
+
+.goods__list {
+  .reset-list;
+  margin: 30px 0;
+}
+
+.goods__item {
+  border-bottom: 1px solid @border-color;
+  margin-bottom: 30px;
+}
+
+.goods__picture {
+  display: block;
+
+  margin-bottom: 28px;
+}
+
+.goods__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  // на время
+  @media (min-width: 600px) {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+.goods__text {
+  padding: 0 28px;
+}
+
+.goods__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: @bold-text-color;
+
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.goods__description {
+  font-size: 13px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid @border-color;
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.goods__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 27px;
+}
+
+.goods__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: @bold-text-color;
+}
