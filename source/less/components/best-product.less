@@ -1,7 +1,8 @@
 @text-container-width: 292px;
 
 .best-product {
-  padding-bottom: 31px;
+  padding-bottom: 42px;
+  margin-bottom: 31px;
 }
 
 .best-product__container {
@@ -56,7 +57,12 @@
 
 .best-product__image {
   display: block;
+
+  margin: 0 auto;
   margin-bottom: 25px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
 }
 
 .best-product__price {
@@ -78,7 +84,8 @@
 // tablet
 @media (min-width: @tablet-container-width) {
   .best-product {
-    padding-bottom: 56px;
+    padding-bottom: 69px;
+    margin-bottom: 56px;
   }
 
   .best-product__container {
@@ -143,14 +150,15 @@
 // computer
 @media (min-width: @computer-container-width) {
   .best-product {
-    padding-bottom: 68px;
+    padding-bottom: 96px;
+    margin-bottom: 68px;
   }
 
   .best-product__title-container {
     flex-direction: row-reverse;
     justify-content: start;
 
-    margin-top: 61px;
+    padding-top: 69px;
     margin-bottom: 35px;
   }
 
@@ -184,9 +192,5 @@
 
   .best-product__properties {
     margin-bottom: 109px;
-  }
-
-  .best-product__order {
-    margin-bottom: 96px;
   }
 }
