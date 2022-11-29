@@ -1,8 +1,10 @@
 .header {
-  position: relative;
+  border-bottom: 1px solid @border-color;
 }
 
 .header__container {
+  position: relative;
+
   display: flex;
   justify-content: end;
   align-items: center;
@@ -28,4 +30,39 @@
   display: none;
 
   margin: 0;
+}
+
+// tablet
+@media (min-width: @tablet-container-width) {
+  .header__container {
+    display: block;
+
+    width: 100%;
+    min-height: 89px;
+  }
+
+  .header__navigation {
+    position: static;
+    inset: none;
+    z-index: none;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__additionally-text {
+    position: absolute;
+    bottom: -44px;
+    right: 0;
+    // при изменение left посмотреть в .navigation__main-links
+    left: 60%;
+
+    display: flex;
+    justify-content: end;
+
+    font-size: 15px;
+    line-height: 24px;
+    padding-right: @tablet-container-indent;
+  }
 }
