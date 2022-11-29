@@ -1,5 +1,6 @@
 .navigation__menu {
-  position: relative;
+  position: absolute;
+  inset: 0;
 
   background-color: @contrast-color;
 }
@@ -44,15 +45,17 @@
   .navigation__menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .navigation__logo {
     position: static;
-    inset: none;
+    inset: 0;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
 
     transform: none;
-    padding: 23px 0 20px;
   }
 
   .navigation__action-links {
