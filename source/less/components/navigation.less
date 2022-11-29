@@ -36,7 +36,7 @@
     inset 0 1px 0 @border-color;
 }
 
-.navigation__extra-link {
+.navigation__extra-links {
   display: none;
 }
 
@@ -66,7 +66,7 @@
     position: absolute;
     bottom: -45px;
     left: 0;
-    // при изменение left посмотреть в .header__additionally-text
+    // при изменение right посмотреть в .header__additionally-text
     right: 40%;
 
     display: block;
@@ -106,6 +106,55 @@
   .navigation__main-link {
     font-size: 15px;
     padding: 19px 23px 19px 22px;
+
+    &--first {
+      padding-left: 0;
+    }
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .navigation__main-links {
+    position: static;
+
+    display: flex;
+  }
+
+  .navigation__main-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+
+    padding: 33px 37px 32px 35px;
+    border-left: 1px solid @border-color;
+
+    &--first {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  .navigation__extra-links {
+    position: absolute;
+    bottom: -64px;
+    left: 0;
+    // при изменение right посмотреть в .header__additionally-text
+    right: 40%;
+
+    display: flex;
+  }
+
+  .navigation__extra-link {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: @bold-text-color;
+
+    text-decoration: none;
+    padding: 20px 25px 20px 36px;
 
     &--first {
       padding-left: 0;
