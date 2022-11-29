@@ -1,8 +1,11 @@
-.navigation__menu {
-  position: absolute;
-  inset: 0;
+.navigation {
+  position: relative;
+}
 
-  background-color: @contrast-color;
+.navigation__menu {
+  position: relative;
+
+  background-color: @page-color;
 }
 
 .navigation__logo {
@@ -49,7 +52,6 @@
 
   .navigation__logo {
     position: static;
-    inset: 0;
 
     display: flex;
     justify-self: center;
@@ -103,6 +105,10 @@
     }
   }
 
+  .navigation__cart-icon {
+    flex-shrink: 0;
+  }
+
   .navigation__main-link {
     font-size: 15px;
     padding: 19px 23px 19px 22px;
@@ -135,6 +141,10 @@
       padding-left: 0;
       border-left: none;
     }
+  }
+
+  .navigation__logo {
+    margin-right: 4px;
   }
 
   .navigation__extra-links {
