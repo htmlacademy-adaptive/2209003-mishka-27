@@ -42,19 +42,23 @@
 
 .reviews__buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   margin-bottom: 38px;
 }
 
 .reviews__button {
   width: 50%;
+  max-width: (@interactive-element-max-width / 2);
   height: 52px;
   padding: 0;
 }
 
 .reviews__writing-button {
   display: block;
+
+  max-width: @interactive-element-max-width;
+  margin: 0 auto;
 }
 
 // tablet
