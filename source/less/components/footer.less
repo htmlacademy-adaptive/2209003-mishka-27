@@ -73,3 +73,29 @@
   right: -27px;
   bottom: -4px;
 }
+
+// tablet
+@media (min-width: @tablet-container-width) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
+
+  .footer__logo {
+    display: block;
+  }
+
+  .footer__social {
+    margin: 0;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .footer__outer-company {
+    margin-bottom: 0;
+  }
+}
