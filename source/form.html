@@ -66,11 +66,12 @@
           </p>
           <form class="order-form__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="order-form__type order-form__block">
-              <legend class="order-form__subtitle order-form__subtitle-type">Тип</legend>
+              <legend class="visually-hidden">Тип товара</legend>
+              <p class="order-form__subtitle order-form__subtitle-type">Тип</p>
               <ul class="order-form__list">
                 <li class="order-form__item order-form__item-type">
                   <input class="order-form__radio" id="interior" type="radio" name="type" checked>
-                  <label class="order-form__label order-form__radio-label" for="interior">
+                  <label class="order-form__label order-form__radio-label order-form__radio-label--interior" for="interior">
                     Аксессуар для интерьера
                   </label>
                 </li>
@@ -83,7 +84,8 @@
               </ul>
             </fieldset>
             <fieldset class="order-form__color order-form__block">
-              <legend class="order-form__subtitle order-form__subtitle-color">Цвет</legend>
+              <legend class="visually-hidden">Цвет продукта</legend>
+              <p class="order-form__subtitle order-form__subtitle-color">Цвет</p>
               <ul class="order-form__list">
                 <li class="order-form__item order-form__item-color">
                   <input class="order-form__checkbox" id="white" type="checkbox" name="white" checked>
@@ -112,7 +114,8 @@
               </ul>
             </fieldset>
             <fieldset class="order-form__full-name order-form__block">
-              <legend class="order-form__subtitle order-form__subtitle-full-name">ФИО</legend>
+              <legend class="visually-hidden">Фамилия Имя Отчество</legend>
+              <p class="order-form__subtitle order-form__subtitle-full-name">ФИО</p>
               <label class="order-form__label order-form__input-label" for="name">Имя:</label>
               <input class="order-form__input" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
               <label class="order-form__label order-form__input-label" for="surname">Фамилия:</label>
@@ -130,10 +133,10 @@
             </fieldset>
             <fieldset class="order-form__extra order-form__block">
               <label class="order-form__subtitle order-form__subtitle-extra" for="extra">Доп<span class="visually-hidden">олнительная информация.</span></label>
-              <textarea class="order-form__textarea" name="extra" id="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="order-form__input order-form__input--textarea" name="extra" id="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
             <p class="order-form__postscriptum">*Поля обязательны для заполнения</p>
-            <button class="order-form__submit" type="submit">Отправить заказ</button>
+            <button class="order-form__submit button" type="submit">Отправить заказ</button>
           </form>
         </div>
       </section>
