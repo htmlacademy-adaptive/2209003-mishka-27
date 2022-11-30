@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
 
-  .container-width;
-  border-bottom: 1px solid @border-color;
+  border: 1px solid @border-color;
+  margin: 0 @mobile-container-indent;
   margin-bottom: 58px;
 }
 
@@ -13,9 +13,7 @@
   line-height: 24px;
   color: @bold-text-color;
 
-  margin: 0;
-  margin-left: 91px;
-  margin-bottom: 27px;
+  margin: 22px 0 27px 91px;
   order: -1;
 }
 
@@ -25,24 +23,21 @@
   width: 100%;
   height: auto;
   margin-bottom: 35px;
+}
 
-  // tempolarity
-  @media (min-width: 600px) {
-    width: 400px;
-  }
+.presentation__footer-container {
+  padding: 0 34px;
 }
 
 .presentation__text {
   font-size: 13px;
   line-height: 24px;
 
-  padding-left: 34px;
   margin: 0;
   margin-bottom: 41px;
 }
 
 .presentation__button {
-  align-self: center;
-
   margin-bottom: 33px;
+  width: 100%;
 }
