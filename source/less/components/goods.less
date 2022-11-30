@@ -37,8 +37,6 @@
 
 .goods__text {
   padding: 0 28px;
-  border: 1px solid @border-color;
-  border-left: none;
 }
 
 .goods__title {
@@ -102,6 +100,7 @@
 
     flex-grow: 1;
     padding: 27px 39px 26px 34px;
+    border: 1px solid @border-color;
   }
 
   .goods__title {
@@ -122,5 +121,41 @@
 
   .goods__price {
     font-size: 17px;
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .goods {
+    margin: 111px 0 57px;
+  }
+
+  .goods__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
+  }
+
+  .goods__item {
+    flex-direction: column;
+
+    margin-bottom: 0;
+  }
+
+  .goods__image {
+    width: 316px;
+    height: 462px;
+  }
+
+  .goods__text {
+    padding: 27px 34px 26px 27px;
+  }
+
+  .goods__title {
+    margin-bottom: 6px;
+  }
+
+  .goods__description {
+    margin-bottom: 37px;
   }
 }
