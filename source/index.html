@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8ccf966d-4b67-49bd-8aa1-a436d485e6c7&lang=ru_RU"></script>
+    <script src="./js/map.js"></script>
   </head>
   <body class="page__body">
     <header class="header">
@@ -175,18 +177,15 @@
               <div class="contacts__text-container contacts__text-container--last">
                 <p class="contacts__text-label">адрес:</p>
                 <p class="contacts__text">
-                  г.&nbsp;Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис 101
+                  г.&nbsp;Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8,&nbsp;офис&nbsp;101
                 </p>
               </div>
             </address>
           </div>
-          <div class="contacts__map-container">
-            <!-- на время поставил картинку, потом заменю на настоящую карту -->
-            <picture class="contacts__map-picture">
-              <img class="contacts__map-image" width="320" height="454" src="./img/content/map-modile.jpg" alt="Карта того, где находиться наш магазин.">
-            </picture>
+          <div class="contacts__map-container" id="map"></div>
+          <div class="contacts__link-container">
+            <a class="contacts__link button" href="#">Напишите нам</a>
           </div>
-          <a class="contacts__link button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>

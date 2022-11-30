@@ -14,9 +14,6 @@
 }
 
 .contacts__address {
-  display: flex;
-  flex-direction: column;
-
   font-size: 14px;
 
   font-style: normal;
@@ -64,22 +61,59 @@
 }
 
 .contacts__map-container {
+  width: 100%;
+  height: 454px;
   margin-bottom: 42px;
 }
 
-.contacts__map-image {
-  width: 100%;
-  height: 100%;
-
-  // на время
-  @media (min-width: @tablet-container-width) {
-    width: 400px;
-  }
+.contacts__link-container {
+  .container-width;
+  margin-bottom: 39px;
 }
 
 .contacts__link {
-  display: flex;
-  justify-content: center;
+  display: block;
 
-  margin-bottom: 39px;
+  width: 100%;
+  max-width: @interactive-element-max-width;
+  margin: 0 auto;
+}
+
+// tablet
+@media (min-width: @tablet-container-width) {
+  .contacts__content-container {
+    margin-bottom: 49px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+
+    margin-bottom: 49px;
+  }
+
+  .contacts__address {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
+    font-size: 17px;
+  }
+
+  .contacts__map-container {
+    height: 457px;
+    margin-bottom: 55px;
+  }
+
+  .contacts__text-label {
+    width: 82px;
+  }
+
+  .contacts__text-container {
+    margin-bottom: 0;
+  }
+
+  .contacts__link-container {
+    margin-bottom: 57px;
+  }
 }
