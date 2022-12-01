@@ -2,8 +2,9 @@
   'use strict';
 
   const modal = document.querySelector('.modal');
-  const buttons = document.querySelectorAll('[data-modal]');
+  const buttons = document.querySelectorAll('[data-modal="open"]');
   const CLASS_FOR_OPEN = 'modal--open';
+  const closeButton = modal.querySelector('[data-modal="close"]');
 
   // for open
   const openModal = (event) => {
@@ -30,4 +31,6 @@
   document.addEventListener('keyup', (event) => {
     event.key === 'Escape' ? closeModal() : null;
   });
+
+  closeButton.addEventListener('click', closeModal);
 })();
