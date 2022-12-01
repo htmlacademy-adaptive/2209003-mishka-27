@@ -24,6 +24,7 @@
     linkLists.forEach((linkList) => {
       if (linkList.contains(target)) {
         isLinkListsChildren = true;
+        return;
       }
     });
 
