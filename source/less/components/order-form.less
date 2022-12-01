@@ -217,6 +217,7 @@
   &--textarea {
     border: 2px solid @bold-text-color;
     padding: 17px;
+    resize: none;
   }
 }
 
@@ -235,7 +236,7 @@
   }
 
   .order-form__submit {
-    width: (0% + (230 / @tablet-content-width)) * 100;
+    width: 230px;
   }
 
   .order-form__postscriptum {
@@ -255,7 +256,7 @@
   }
 
   .order-form__type {
-    margin-bottom: 69px;
+    margin-bottom: 67px;
   }
 
   .order-form__color {
@@ -338,10 +339,10 @@
 
     &::before {
       left: -78px;
-    }
+      top: -18px;
 
-    &--interior::before {
-      top: -14px;
+      width: 52px;
+      height: 52px;
     }
   }
 
@@ -350,6 +351,10 @@
 
     &::before {
       left: -82px;
+      top: -19px;
+
+      width: 52px;
+      height: 52px;
     }
   }
 
@@ -404,5 +409,47 @@
     &--textarea {
       height: 142px;
     }
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .order-form {
+    margin-top: 99px;
+  }
+
+  .order-form__description {
+    padding-left: 174px;
+    padding-right: 190px;
+
+    margin-bottom: 80px;
+  }
+
+  // blocks (fieldsets)
+  .order-form__block,
+  .order-form__footer-container {
+    padding-left: 46px;
+    padding-right: 192px;
+  }
+
+  .order-form__type {
+    margin-bottom: 66px;
+  }
+
+  .order-form__color {
+    padding-top: 68px;
+    padding-bottom: 67px;
+    padding-right: 0;
+  }
+
+  // subtitles
+  .order-form__subtitle {
+    width: 113px;
+  }
+
+  // lists
+  .order-form__list-color {
+    grid-template-columns: repeat(3, 262px);
+    gap: 57px 0;
   }
 }
