@@ -6,7 +6,8 @@
     <title>Мишка</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/burger.js" defer></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=8ccf966d-4b67-49bd-8aa1-a436d485e6c7&lang=ru_RU"></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8ccf966d-4b67-49bd-8aa1-a436d485e6c7&lang=ru_RU" defer></script>
     <script src="./js/map.js" defer></script>
   </head>
   <body class="page__body">
@@ -109,7 +110,7 @@
               <img class="best-product__image" width="260" height="315" src="./img/content/three-carts.jpg" alt="Три вязаных корзинки, которые стоят друг на друге.">
             </picture>
             <b class="best-product__price">Цена: 990&nbsp;руб.</b>
-            <a class="best-product__order button" href="./modal.html">Заказать</a>
+            <a class="best-product__order button" href="./modal.html" data-modal>Заказать</a>
           </div>
         </div>
       </section>
@@ -235,7 +236,7 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modal__buttons-container">
             <div class="modal__button-container">
-              <input class="visually-hidden" id="size-s" type="radio" name="size">
+              <input class="visually-hidden" id="size-s" type="radio" name="size" checked>
               <label class="modal__label" for="size-s" aria-label="Размер Эс.">S</label>
             </div>
             <div class="modal__button-container">
