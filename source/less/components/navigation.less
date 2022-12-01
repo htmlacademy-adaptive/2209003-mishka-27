@@ -22,17 +22,28 @@
 }
 
 .navigation__menu-link {
+  position: relative;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  text-align: center;
   text-decoration: none;
   color: @bold-text-color;
 
-  padding: 29px 0 27px;
+  padding: 28px 27px;
+  padding-left: 72px;
+
   box-shadow:
     0 1px 0 @border-color,
     inset 0 1px 0 @border-color;
+}
+
+.navigation__icon {
+  position: absolute;
+  left: 36px;
+  top: 29px;
+
+  color: fade(@bold-text-color, 20%);
 }
 
 .navigation__extra-links {
@@ -58,6 +69,11 @@
 
   .navigation__action-links {
     display: flex;
+    flex-direction: row;
+  }
+
+  .navigation__icon {
+    position: static;
   }
 
   .navigation__main-links {
