@@ -38,7 +38,7 @@
                 </span>
               </a>
               <a class="navigation__menu-link navigation__action-link navigation__action-link--cart link" href="./cart.html">
-                <svg class="navigation__icon" aria-hidden="true" class="navigation__cart-icon" width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg"><path d="M20.2 6.9h-3.6L13.2.4c-.2-.4-.6-.5-1-.3s-.5.6-.3 1L15 6.8H5.8L8.9 1c.2-.3 0-.7-.3-.9a.8.8 0 0 0-1 .3L4.2 6.9H.8c-.4 0-.8.2-.8.7 0 .4.3.8.8.8H1l1 2.8c-.3.1-.4.3-.4.6 0 .4.3.7.7.7L4.1 18h12.8l1.8-5.5c.4 0 .7-.3.7-.7 0-.2-.1-.5-.3-.6l.9-2.8h.2c.4 0 .8-.3.8-.8s-.4-.7-.8-.7Zm-4.6 9.6H5.1l-1.2-4.1h13l-1.3 4Zm1.6-5.5H3.3l-.8-2.7h15.6l-.9 2.7Z" fill="currentColor"/></svg>
+                <svg class="navigation__icon" aria-hidden="true" width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg"><path d="M20.2 6.9h-3.6L13.2.4c-.2-.4-.6-.5-1-.3s-.5.6-.3 1L15 6.8H5.8L8.9 1c.2-.3 0-.7-.3-.9a.8.8 0 0 0-1 .3L4.2 6.9H.8c-.4 0-.8.2-.8.7 0 .4.3.8.8.8H1l1 2.8c-.3.1-.4.3-.4.6 0 .4.3.7.7.7L4.1 18h12.8l1.8-5.5c.4 0 .7-.3.7-.7 0-.2-.1-.5-.3-.6l.9-2.8h.2c.4 0 .8-.3.8-.8s-.4-.7-.8-.7Zm-4.6 9.6H5.1l-1.2-4.1h13l-1.3 4Zm1.6-5.5H3.3l-.8-2.7h15.6l-.9 2.7Z" fill="currentColor"/></svg>
                 <span class="navigation__action-text navigation__action-text--cart">
                   Корзина: пока пуста
                 </span>
@@ -224,5 +224,32 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <h2 class="visually-hidden">Форма для выбора размера нужного вам товара.</h2>
+      <button class="visually-hidden" type="button">Нажми, чтобы закрыть форму.</button>
+      <div class="modal__container">
+        <div class="modal__text-container">
+          <p class="modal__title">Добавить в&nbsp;корзину</p>
+          <p class="modal__text">Выберите размер:</p>
+        </div>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal__buttons-container">
+            <div class="modal__button-container">
+              <input class="visually-hidden" id="size-s" type="radio" name="size">
+              <label class="modal__label" for="size-s" aria-label="Размер Эс.">S</label>
+            </div>
+            <div class="modal__button-container">
+              <input class="visually-hidden" id="size-m" type="radio" name="size">
+              <label class="modal__label" for="size-m" aria-label="Размер Эм.">M</label>
+            </div>
+            <div class="modal__button-container">
+              <input class="visually-hidden" id="size-l" type="radio" name="size">
+              <label class="modal__label" for="size-l" aria-label="Размер Эль.">L</label>
+            </div>
+          </div>
+          <button class="modal__submit" type="submit">Добавить</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
