@@ -1,3 +1,30 @@
 .link {
   color: @bold-text-color;
+  cursor: pointer;
+  transition: all @animation-time;
+
+  &:hover:not(:disabled) {
+    color: fade(@bold-text-color, 60%);
+  }
+
+  &:active:not(:disabled) {
+    color: fade(@bold-text-color, 30%);
+  }
+
+  &:disabled {
+    color: fade(@bold-text-color, 10%);
+    cursor: not-allowed;
+  }
+
+  &--image:hover:not(:disabled) {
+    opacity: 0.6;
+  }
+
+  &--image:active:not(:disabled) {
+    opacity: 0.3;
+  }
+
+  &--image:disabled {
+    opacity: 0.1;
+  }
 }

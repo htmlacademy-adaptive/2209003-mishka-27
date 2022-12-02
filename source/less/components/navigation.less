@@ -36,6 +36,14 @@
   box-shadow:
     0 1px 0 @border-color,
     inset 0 1px 0 @border-color;
+
+  &:hover .navigation__icon {
+    color: @special-color;
+  }
+
+  &:active .navigation__icon {
+    color: fade(@special-color, 30%);
+  }
 }
 
 .navigation__icon {
@@ -44,6 +52,7 @@
   top: 29px;
 
   color: fade(@bold-text-color, 20%);
+  transition: all @animation-time;
 }
 
 .navigation__extra-links {
@@ -108,8 +117,7 @@
 
   .navigation__action-text {
     &--search {
-      position: absolute;
-      z-index: -1;
+      .visually-hidden;
     }
 
     &--cart {
