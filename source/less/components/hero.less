@@ -1,5 +1,5 @@
 .hero {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .hero__text-container {
@@ -52,4 +52,50 @@
   display: inline-block;
 
   width: 130px;
+}
+
+@media (min-width: @tablet-container-width) {
+  .hero {
+    margin-bottom: 40px;
+  }
+
+  .hero__title {
+    font-size: 43px;
+    line-height: 50px;
+
+    padding: 155px 0 372px;
+  }
+
+  .hero__links {
+    flex-direction: row;
+
+    .container-width;
+  }
+
+  .hero__link-container {
+    flex-basis: 50%;
+  }
+
+  .hero__link {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding: 25px 36px 34px;
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .hero {
+    margin-bottom: 71px;
+  }
+
+  .hero__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    padding: 158px 0 355px;
+    width: 700px;
+    margin: 0 auto;
+  }
 }

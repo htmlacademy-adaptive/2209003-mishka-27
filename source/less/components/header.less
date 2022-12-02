@@ -1,8 +1,10 @@
 .header {
-  position: relative;
+  border-bottom: 1px solid @border-color;
 }
 
 .header__container {
+  position: relative;
+
   display: flex;
   justify-content: end;
   align-items: center;
@@ -28,4 +30,44 @@
   display: none;
 
   margin: 0;
+}
+
+// tablet
+@media (min-width: @tablet-container-width) {
+  .header__container {
+    display: block;
+
+    min-height: 89px;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__navigation {
+    position: relative;
+    inset: 0;
+  }
+
+  .header__additionally-text {
+    position: absolute;
+    bottom: -44px;
+    right: 0;
+    // при изменение left посмотреть в .navigation__main-links
+    left: 60%;
+
+    display: flex;
+    justify-content: end;
+
+    font-size: 15px;
+    line-height: 24px;
+    padding-right: @tablet-container-indent;
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .header__additionally-text {
+    padding-right: 0;
+  }
 }
