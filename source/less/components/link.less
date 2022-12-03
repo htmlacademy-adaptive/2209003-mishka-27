@@ -1,30 +1,27 @@
+// Для работы с компонентом нужно вставить внутрь span
+
 .link {
   color: @bold-text-color;
   cursor: pointer;
-  transition: all @animation-time;
 
-  &:hover:not(:disabled) {
-    color: fade(@bold-text-color, 60%);
+  & > span {
+    transition: opacity @animation-time;
   }
 
-  &:active:not(:disabled) {
-    color: fade(@bold-text-color, 30%);
-  }
-
-  &:disabled {
-    color: fade(@bold-text-color, 10%);
-    cursor: not-allowed;
-  }
-
-  &--image:hover:not(:disabled) {
+  &:hover:not(:disabled):not(&--no-active) > span {
     opacity: 0.6;
   }
 
-  &--image:active:not(:disabled) {
+  &:active:not(:disabled):not(&--no-active) > span {
     opacity: 0.3;
   }
 
-  &--image:disabled {
-    opacity: 0.1;
+  &:disabled > span {
+    opacity: 1;
+    cursor: not-allowed;
+  }
+
+  &--no-active {
+    cursor: default;
   }
 }
