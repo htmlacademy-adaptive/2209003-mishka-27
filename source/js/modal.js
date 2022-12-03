@@ -12,6 +12,7 @@
 
     modal.classList.add(CLASS_FOR_OPEN);
     document.body.style.overflow = 'hidden';
+    closeButton.focus();
   };
 
   buttons.forEach((button) => {
