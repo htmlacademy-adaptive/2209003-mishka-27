@@ -28,6 +28,8 @@
 }
 
 .about-us__item {
+  position: relative;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
@@ -57,6 +59,73 @@
 
   &--gift-wrap {
     grid-area: gift-wrap;
+  }
+
+  &--pure-materials::before,
+  &--tied-toy::before,
+  &--scandinavian-style::before,
+  &--support::before,
+  &--likes::before,
+  &--gift-wrap::before {
+    position: absolute;
+    bottom: calc(100% + 18px);
+    left: 0;
+
+    background-repeat: no-repeat;
+
+    content: "";
+  }
+
+  &--pure-materials::before {
+    left: 8px;
+
+    background-image: url("../img/about-us/flower.svg");
+
+    width: 33px;
+    height: 38px;
+  }
+
+  &--tied-toy::before {
+    left: -3px;
+
+    background-image: url("../img/about-us/clew.svg");
+
+    width: 35px;
+    height: 34px;
+  }
+
+  &--scandinavian-style::before {
+    background-image: url("../img/about-us/banknote.svg");
+
+    width: 47px;
+    height: 27px;
+  }
+
+  &--support::before {
+    left: -6px;
+
+    background-image: url("../img/about-us/rocket.svg");
+
+    width: 55px;
+    height: 23px;
+  }
+
+  &--likes::before {
+    left: 7px;
+
+    background-image: url("../img/about-us/heart.svg");
+
+    width: 34px;
+    height: 27px;
+  }
+
+  &--gift-wrap::before {
+    left: 3px;
+
+    background-image: url("../img/about-us/present.svg");
+
+    width: 33px;
+    height: 32px;
   }
 }
 
@@ -95,6 +164,15 @@
     &--tied-toy {
       margin-top: 95px;
     }
+
+    &--pure-materials::before,
+    &--tied-toy::before,
+    &--scandinavian-style::before,
+    &--support::before,
+    &--likes::before,
+    &--gift-wrap::before {
+      bottom: calc(100% + 21px);
+    }
   }
 }
 
@@ -102,5 +180,16 @@
 @media (min-width: @computer-container-width) {
   .about-us {
     margin-bottom: 90px;
+  }
+
+  .about-us__item {
+    &--pure-materials::before,
+    &--tied-toy::before,
+    &--scandinavian-style::before,
+    &--support::before,
+    &--likes::before,
+    &--gift-wrap::before {
+      bottom: calc(100% + 28px);
+    }
   }
 }
