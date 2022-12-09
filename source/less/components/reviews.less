@@ -48,10 +48,38 @@
 }
 
 .reviews__button {
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all @animation-time;
+
   width: 50%;
   max-width: (@element-max-width / 2);
   height: 52px;
   padding: 0;
+  background-color: inherit;
+  border: 1px solid @border-color;
+
+  &--prev {
+    background-image: url("../img/arrows/button-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/arrows/button-arrow-right.svg");
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.6;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+  }
 }
 
 .reviews__writing-button {
@@ -114,5 +142,7 @@
   .reviews__button {
     width: 86px;
     height: 86px;
+
+    border-color: @page-color;
   }
 }

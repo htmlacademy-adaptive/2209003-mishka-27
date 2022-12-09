@@ -9,17 +9,12 @@
     transition: opacity @animation-time;
   }
 
-  &:hover:not(:disabled):not(&--no-active) > span {
+  &:hover:not(&--no-active) > span {
     opacity: 0.6;
   }
 
-  &:active:not(:disabled):not(&--no-active) > span {
+  &:active:not(&--no-active) > span {
     opacity: 0.3;
-  }
-
-  &:disabled > span {
-    opacity: 0.1;
-    cursor: not-allowed;
   }
 
   &:focus-visible {
