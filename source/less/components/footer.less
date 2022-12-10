@@ -41,6 +41,16 @@
   width: @icon-width;
   height: @icon-height;
   padding: 15px;
+
+  transition: all @animation-time;
+
+  &:hover {
+    color: @special-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__outer-company {
@@ -55,9 +65,17 @@
   left: -18px;
 
   text-decoration: none;
-  color: inherit;
+  color: @special-color;
 
   padding: 15px;
+
+  &:hover > svg {
+    color: #46c1ae;
+  }
+
+  &:active > svg {
+    opacity: 0.3;
+  }
 }
 
 .footer__outer-company-text {
@@ -70,10 +88,15 @@
   margin-right: 27px;
 }
 
-.footer__outer-company-image {
+.footer__outer-company-icon {
   position: absolute;
   right: -27px;
   bottom: -4px;
+
+  width: 45px;
+  height: 55px;
+
+  transition: all @animation-time;
 }
 
 // tablet
@@ -89,6 +112,17 @@
 
   .footer__logo {
     display: block;
+
+    transition: all @animation-time;
+    cursor: pointer;
+
+    &:hover {
+      color: @special-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .footer__social {
