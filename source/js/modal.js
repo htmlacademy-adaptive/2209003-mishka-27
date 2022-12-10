@@ -6,6 +6,8 @@
   const CLASS_FOR_OPEN = 'modal--open';
   const closeButton = modal.querySelector('[data-modal="close"]');
 
+  let prevButton;
+
   // for open
   const openModal = (event) => {
     event.preventDefault();
@@ -13,6 +15,7 @@
     modal.classList.add(CLASS_FOR_OPEN);
     document.body.style.overflow = 'hidden';
     closeButton.focus();
+    prevButton = event.target;
   };
 
   buttons.forEach((button) => {
@@ -23,6 +26,7 @@
   const closeModal = () => {
     modal.classList.remove(CLASS_FOR_OPEN);
     document.body.style.overflow = '';
+    prevButton.focus();
   };
 
   modal.addEventListener('click', (event) => {
