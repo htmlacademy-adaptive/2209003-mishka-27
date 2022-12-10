@@ -13,12 +13,14 @@
   text-decoration: none;
   cursor: pointer;
   transition: all @button-animation-time;
+  outline: none;
 
   border: 2px solid @text-color;
   padding: 16px;
   margin: 0;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: @white;
 
     background-color: @gray;

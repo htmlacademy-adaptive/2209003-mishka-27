@@ -3,7 +3,6 @@
 .link {
   color: @bold-text-color;
   cursor: pointer;
-  outline: none;
 
   & > span {
     transition: opacity @animation-time;
@@ -15,10 +14,6 @@
 
   &:active:not(&--no-active) > span {
     opacity: 0.3;
-  }
-
-  &:focus-visible {
-    outline: 2px solid @special-color;
   }
 
   &--no-active {
