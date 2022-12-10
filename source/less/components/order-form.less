@@ -143,11 +143,21 @@
     left: -61px;
     top: -14px;
 
+    transition: all @order-form-input-animation-time;
+
     border-radius: 50%;
     border: 2px solid @text-color;
     width: 42px;
     height: 42px;
     content: "";
+  }
+
+  &:hover::before {
+    border-color: @special-color;
+  }
+
+  &:active::before {
+    border-color: fade(#000000, 30%);
   }
 
   &--interior::before {
@@ -193,6 +203,29 @@
 }
 
 // inputs
+.order-form__radio:checked ~ .order-form__radio-label {
+  &::after {
+    position: absolute;
+    left: -49px;
+    top: -1px;
+
+    background-color: @special-color;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--interior::after {
+    top: 6px;
+  }
+}
+
+.order-form__radio:focus-visible ~ .order-form__radio-label::before {
+  border-color: @special-color;
+}
+
 .order-form__input {
   display: block;
 
@@ -396,6 +429,16 @@
   }
 
   // inputs
+  .order-form__radio:checked ~ .order-form__radio-label {
+    &::after {
+      top: -3px;
+      left: -63px;
+
+      width: 23px;
+      height: 23px;
+    }
+  }
+
   .order-form__input {
     font-size: 19px;
     line-height: 18px;
