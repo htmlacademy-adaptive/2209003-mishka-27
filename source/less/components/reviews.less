@@ -118,6 +118,20 @@
       background-image: url("../img/patterns/zigzag-tablet.svg");
       height: 17px;
     }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      background-image: url("../img/background/reviews-bg.png");
+      background-repeat: no-repeat;
+
+      width: 350px;
+      content: "";
+    }
   }
 
   .reviews__title {
@@ -146,6 +160,7 @@
   .reviews__author-container {
     width: 300px;
     margin-bottom: 0;
+    padding-bottom: 47px;
   }
 
   .reviews__writing-button {
@@ -160,7 +175,7 @@
     position: absolute;
 
     right: @tablet-container-indent;
-    bottom: -42px;
+    bottom: 0;
   }
 
   .reviews__button {
@@ -179,6 +194,8 @@
   }
 
   .reviews__container {
+    padding-left: @left-indent-for-computer;
+
     &::before {
       bottom: -90px;
 

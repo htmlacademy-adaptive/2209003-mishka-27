@@ -141,6 +141,7 @@
 
     max-width: @computer-container-width;
     width: 100%;
+    padding: 0 @computer-container-indent;
     margin: 0 auto;
   }
 
@@ -179,13 +180,15 @@
   }
 
   .contacts__link-container {
+    margin: 0;
     margin-bottom: 105px;
+    width: 230px;
   }
 
   .contacts__map-container {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: @computer-container-indent;
 
     width: 527px;
     height: 457px;
