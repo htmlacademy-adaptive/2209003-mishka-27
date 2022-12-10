@@ -45,6 +45,11 @@
 
   color: inherit;
   text-decoration: none;
+  transition: all @animation-time;
+
+  &:hover {
+    color: @special-color;
+  }
 
   // for underline
   &::before {
@@ -55,8 +60,14 @@
 
     height: 1px;
     background-color: @special-color;
+    transition: all @animation-time;
+    opacity: 1;
 
     content: "";
+  }
+
+  &:active::before {
+    opacity: 0;
   }
 }
 
