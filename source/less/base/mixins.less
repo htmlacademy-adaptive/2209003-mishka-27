@@ -34,34 +34,3 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.add-zigzag() {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-
-    background-repeat: repeat-x;
-    background-image: url("../img/patterns/zigzag-mobile.svg");
-
-    height: 6px;
-    content: "";
-  }
-
-  @media (min-width: @tablet-container-width) {
-    &::before {
-      background-image: url("../img/patterns/zigzag-tablet.svg");
-      height: 17px;
-    }
-  }
-
-  @media (min-width: @computer-container-width) {
-    &::before {
-      background-image: url("../img/patterns/zigzag-computer.svg");
-      height: 23px;
-    }
-  }
-}
