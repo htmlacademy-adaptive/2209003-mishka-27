@@ -1,6 +1,8 @@
 .reviews {
   padding-bottom: 51px;
   margin-bottom: 38px;
+
+  .add-zigzag;
 }
 
 .reviews__container {
@@ -119,9 +121,13 @@
     font-size: 18px;
   }
 
+  .reviews__id {
+    margin-bottom: 0;
+  }
+
   .reviews__author-container {
     width: 300px;
-    margin-bottom: 47px;
+    margin-bottom: 0;
   }
 
   .reviews__writing-button {
@@ -144,5 +150,13 @@
     height: 86px;
 
     border-color: @page-color;
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .reviews {
+    padding-bottom: 90px;
+    margin-bottom: 150px;
   }
 }
