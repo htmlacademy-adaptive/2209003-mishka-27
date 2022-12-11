@@ -65,10 +65,14 @@
 }
 
 .order-form__phone {
+  position: relative;
+
   margin-bottom: 35px;
 }
 
 .order-form__email {
+  position: relative;
+
   margin-bottom: 35px;
 }
 
@@ -276,6 +280,9 @@
 }
 
 .order-form__input {
+  position: relative;
+  z-index: 2;
+
   display: block;
 
   font-size: 17px;
@@ -284,6 +291,8 @@
 
   background-color: inherit;
   color: @bold-text-color;
+  transition: all @order-form-input-animation-time;
+  outline: none;
 
   width: 100%;
   margin-bottom: 22px;
@@ -302,6 +311,34 @@
     border: 2px solid @bold-text-color;
     padding: 17px;
     resize: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: @special-color;
+  }
+
+  &:disabled {
+    border-color: fade(@black, 10%);
+    cursor: not-allowed;
+  }
+
+  &--phone ~ &-phone-icon,
+  &--email ~ &-email-icon {
+    position: absolute;
+    top: 49px;
+    right: 37px;
+
+    color: fade(@black, 30%);
+
+    transition: all @order-form-input-animation-time;
+  }
+
+  &--phone:hover ~ &-phone-icon,
+  &--phone:focus-visible ~ &-phone-icon,
+  &--email:hover ~ &-email-icon,
+  &--email:focus-visible ~ &-email-icon {
+    color: @special-color;
   }
 }
 
@@ -517,6 +554,16 @@
     &--textarea {
       height: 142px;
     }
+
+    &--phone ~ &-phone-icon {
+      top: 66px;
+      right: 66px;
+    }
+
+    &--email ~ &-email-icon {
+      top: 23px;
+      right: 66px;
+    }
   }
 }
 
@@ -559,5 +606,16 @@
   .order-form__list-color {
     grid-template-columns: repeat(3, 262px);
     gap: 57px 0;
+  }
+
+  // inputs
+  .order-form__input {
+    &--phone ~ &-phone-icon {
+      right: 212px;
+    }
+
+    &--email ~ &-email-icon {
+      right: 210px;
+    }
   }
 }
