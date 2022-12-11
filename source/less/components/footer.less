@@ -114,13 +114,16 @@
     display: block;
 
     transition: all @animation-time;
-    cursor: pointer;
 
-    &:hover {
+    &[href] {
+      cursor: pointer;
+    }
+
+    &:hover[href] {
       color: @special-color;
     }
 
-    &:active {
+    &:active[href] {
       opacity: 0.3;
     }
   }

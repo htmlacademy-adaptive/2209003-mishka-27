@@ -2,21 +2,20 @@
 
 .link {
   color: @bold-text-color;
-  cursor: pointer;
 
   & > span {
     transition: opacity @animation-time;
   }
 
-  &:hover:not(&--no-active) > span {
+  &[href] {
+    cursor: pointer;
+  }
+
+  &:hover[href] > span {
     opacity: 0.6;
   }
 
-  &:active:not(&--no-active) > span {
+  &:active[href] > span {
     opacity: 0.3;
-  }
-
-  &--no-active {
-    cursor: default;
   }
 }
