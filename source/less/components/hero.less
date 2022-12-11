@@ -29,6 +29,8 @@
 }
 
 .hero__link {
+  position: relative;
+
   display: block;
 
   text-decoration: none;
@@ -37,7 +39,9 @@
   line-height: 24px;
   color: @contrast-color;
 
+  outline: none;
   padding: 24px 30px 31px;
+  transition: transform @animation-time;
 
   &--interior {
     background-color: @special-color;
@@ -45,6 +49,68 @@
 
   &--toys {
     background-color: @special-darker-color;
+  }
+
+  // icons
+  &--interior::before,
+  &--toys::before {
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    transition: opacity @animation-time;
+    content: "";
+  }
+
+  &--interior::before {
+    top: 30px;
+    right: 36px;
+
+    background-image: url("../img/icons/interior.svg");
+
+    width: 40px;
+    height: 62px;
+  }
+
+  &--toys::before {
+    top: 32px;
+    right: 35px;
+
+    background-image: url("../img/icons/toys.svg");
+
+    width: 60px;
+    height: 60px;
+  }
+
+  // hover
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-5px);
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    bottom: -10px;
+    z-index: -1;
+
+    background-color: @special-color;
+
+    content: "";
+  }
+
+  &--toys::after {
+    background-color: @special-darker-color;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  // active
+  &:active::before {
+    opacity: 0.3;
   }
 }
 
@@ -66,6 +132,24 @@
     padding: 155px 0 372px;
   }
 
+  .hero__links-container {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: -21px;
+      left: -11px;
+      z-index: 1;
+
+      background-image: url("../img/patterns/zigzag-fill-tablet.png");
+      background-repeat: repeat-x;
+
+      height: 34px;
+      content: "";
+    }
+  }
+
   .hero__links {
     flex-direction: row;
 
@@ -81,6 +165,11 @@
     line-height: 30px;
 
     padding: 25px 36px 34px;
+
+    &--toys::before {
+      top: 31px;
+      right: 33px;
+    }
   }
 }
 
@@ -97,5 +186,17 @@
     padding: 158px 0 355px;
     width: 700px;
     margin: 0 auto;
+  }
+
+  .hero__links-container {
+    &::before {
+      background-image: url("../img/patterns/zigzag-fill-computer.png");
+    }
+  }
+
+  .hero__link {
+    &--toys::before {
+      right: 35px;
+    }
   }
 }

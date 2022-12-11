@@ -4,7 +4,22 @@
 }
 
 .reviews__container {
+  position: relative;
+
   .container-width;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -51px;
+
+    background-repeat: repeat-x;
+    background-image: url("../img/patterns/zigzag-mobile.svg");
+
+    height: 6px;
+    content: "";
+  }
 }
 
 .reviews__title {
@@ -48,10 +63,38 @@
 }
 
 .reviews__button {
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all @animation-time;
+
   width: 50%;
   max-width: (@element-max-width / 2);
   height: 52px;
   padding: 0;
+  background-color: inherit;
+  border: 1px solid @border-color;
+
+  &--prev {
+    background-image: url("../img/arrows/button-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/arrows/button-arrow-right.svg");
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.6;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+  }
 }
 
 .reviews__writing-button {
@@ -69,7 +112,26 @@
   }
 
   .reviews__container {
-    position: relative;
+    &::before {
+      bottom: -85px;
+
+      background-image: url("../img/patterns/zigzag-tablet.svg");
+      height: 17px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      background-image: url("../img/background/reviews-bg.png");
+      background-repeat: no-repeat;
+
+      width: 350px;
+      content: "";
+    }
   }
 
   .reviews__title {
@@ -91,9 +153,14 @@
     font-size: 18px;
   }
 
+  .reviews__id {
+    margin-bottom: 0;
+  }
+
   .reviews__author-container {
     width: 300px;
-    margin-bottom: 47px;
+    margin-bottom: 0;
+    padding-bottom: 47px;
   }
 
   .reviews__writing-button {
@@ -108,11 +175,32 @@
     position: absolute;
 
     right: @tablet-container-indent;
-    bottom: -42px;
+    bottom: 0;
   }
 
   .reviews__button {
     width: 86px;
     height: 86px;
+
+    border-color: @page-color;
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .reviews {
+    padding-bottom: 90px;
+    margin-bottom: 150px;
+  }
+
+  .reviews__container {
+    padding-left: @left-indent-for-computer;
+
+    &::before {
+      bottom: -90px;
+
+      background-image: url("../img/patterns/zigzag-computer.svg");
+      height: 23px;
+    }
   }
 }

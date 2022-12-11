@@ -1,3 +1,21 @@
+// Для работы с компонентом нужно вставить внутрь span
+
 .link {
   color: @bold-text-color;
+
+  & > span {
+    transition: opacity @animation-time;
+  }
+
+  &[href] {
+    cursor: pointer;
+  }
+
+  &:hover[href] > span {
+    opacity: 0.6;
+  }
+
+  &:active[href] > span {
+    opacity: 0.3;
+  }
 }
