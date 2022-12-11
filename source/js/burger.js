@@ -23,6 +23,9 @@
     button.classList.remove(CLASS_FOR_ACTIVE_BUTTON);
   };
 
+  // after load js code
+  resetButtonAndLists();
+
   document.body.addEventListener('click', (event) => {
     const target = event.target;
 
