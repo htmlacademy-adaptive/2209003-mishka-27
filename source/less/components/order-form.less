@@ -236,6 +236,15 @@
   border-color: @special-color;
 }
 
+.order-form__radio:disabled ~ .order-form__radio-label {
+  opacity: 0.3;
+  cursor: not-allowed;
+
+  &::before {
+    border-color: @black;
+  }
+}
+
 .order-form__checkbox:checked ~ .order-form__checkbox-label {
   &::after {
     position: absolute;
@@ -254,6 +263,15 @@
 .order-form__checkbox:focus-visible ~ .order-form__checkbox-label {
   &::before {
     border-color: @special-color;
+  }
+}
+
+.order-form__checkbox:disabled ~ .order-form__checkbox-label {
+  opacity: 0.3;
+  cursor: not-allowed;
+
+  &::before {
+    border-color: @black;
   }
 }
 
