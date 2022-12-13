@@ -119,8 +119,23 @@
                 <dd class="best-product__value">15&nbsp;см</dd>
               </div>
             </dl>
-            <picture class="best-product__picture">
-              <img class="best-product__image" width="260" height="315" src="./img/content/three-carts.jpg" alt="Три вязаных корзинки, которые стоят друг на друге.">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="./img/content/three-carts-computer@2x.jpg 1x, ./img/content/three-carts-computer@2x.jpg 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/content/three-carts-tablet@2x.jpg 1x, ./img/content/three-carts-tablet@2x.jpg 2x"
+              >
+              <img
+                class="best-product__image"
+                width="260"
+                height="315"
+                src="./img/content/three-carts-mobile@1x.jpg"
+                srcset="./img/content/three-carts-mobile@2x.jpg 2x"
+                alt="Три вязаных корзинки, которые стоят друг на друге."
+              >
             </picture>
             <b class="best-product__price">Цена: 990&nbsp;руб.</b>
             <a class="best-product__order button" href="./modal.html" data-modal="open">Заказать</a>
