@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
     <script src="./js/burger.js" defer></script>
     <script src="./js/modal.js" defer></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8ccf966d-4b67-49bd-8aa1-a436d485e6c7&lang=ru_RU" defer></script>
@@ -31,8 +34,10 @@
             </div>
             <a class="navigation__logo link link--no-active">
               <span>
-                <picture class="navigation__logo-images">
-                  <img class="navigation__logo-image" width="86" height="35" src="./img/icons/logo.svg" alt="Логотип сайта 'Мишка'">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="./img/icons/logo-computer.svg">
+                  <source media="(min-width: 768px)" srcset="./img/icons/logo-tablet.svg">
+                  <img class="navigation__logo-image" width="86" height="35" src="./img/icons/logo-mobile.svg" alt="Логотип сайта 'Мишка'">
                 </picture>
               </span>
             </a>
@@ -117,8 +122,23 @@
                 <dd class="best-product__value">15&nbsp;см</dd>
               </div>
             </dl>
-            <picture class="best-product__picture">
-              <img class="best-product__image" width="260" height="315" src="./img/content/three-carts.jpg" alt="Три вязаных корзинки, которые стоят друг на друге.">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="./img/content/three-carts-computer@2x.jpg 1x, ./img/content/three-carts-computer@2x.jpg 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/content/three-carts-tablet@2x.jpg 1x, ./img/content/three-carts-tablet@2x.jpg 2x"
+              >
+              <img
+                class="best-product__image"
+                width="260"
+                height="315"
+                src="./img/content/three-carts-mobile@1x.jpg"
+                srcset="./img/content/three-carts-mobile@2x.jpg 2x"
+                alt="Три вязаных корзинки, которые стоят друг на друге."
+              >
             </picture>
             <b class="best-product__price">Цена: 990&nbsp;руб.</b>
             <a class="best-product__order button" href="./modal.html" data-modal="open">Заказать</a>

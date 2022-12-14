@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка: каталог товаров</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
     <script src="./js/burger.js" defer></script>
     <script src="./js/modal.js" defer></script>
   </head>
@@ -29,8 +32,10 @@
             </div>
             <a class="navigation__logo link" href="./index.html">
               <span>
-                <picture class="navigation__logo-images">
-                  <img class="navigation__logo-image" width="86" height="35" src="./img/icons/logo.svg" alt="Логотип сайта 'Мишка'">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="./img/icons/logo-computer.svg">
+                  <source media="(min-width: 768px)" srcset="./img/icons/logo-tablet.svg">
+                  <img class="navigation__logo-image" width="86" height="35" src="./img/icons/logo-mobile.svg" alt="Логотип сайта 'Мишка'">
                 </picture>
               </span>
             </a>
@@ -73,8 +78,23 @@
           <ul class="goods__list">
             <li class="goods__item">
               <a class="goods__link" href="#">
-                <picture class="goods__picture">
-                  <img class="goods__image" width="260" height="195" src="./img/catalog/bunny.jpg" alt="Зайчик, связаный из ниток.">
+                <picture>
+                  <source
+                    media="(min-width: 1150px)"
+                    srcset="./img/catalog/bunny-computer@1x.jpg 1x, ./img/catalog/bunny-computer@2x.jpg 2x"
+                  >
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./img/catalog/bunny-tablet@1x.jpg 1x, ./img/catalog/bunny-tablet@2x.jpg 2x"
+                  >
+                  <img
+                    class="goods__image"
+                    width="260"
+                    height="195"
+                    src="./img/catalog/bunny-mobile@1x.jpg"
+                    srcset="./img/catalog/bunny-mobile@2x.jpg 2x"
+                    alt="Зайчик, связаный из ниток."
+                  >
                 </picture>
               </a>
               <div class="goods__text">
@@ -95,8 +115,23 @@
             </li>
             <li class="goods__item">
               <a class="goods__link" href="#">
-                <picture class="goods__picture">
-                  <img class="goods__image" width="260" height="195" src="./img/catalog/cart.jpg" alt="Корзинка из ниток в которой лежит бельё.">
+                <picture>
+                  <source
+                    media="(min-width: 1150px)"
+                    srcset="./img/catalog/cart-computer@1x.jpg 1x, ./img/catalog/cart-computer@2x.jpg 2x"
+                  >
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./img/catalog/cart-tablet@1x.jpg 1x, ./img/catalog/cart-tablet@2x.jpg 2x"
+                  >
+                  <img
+                    class="goods__image"
+                    width="260"
+                    height="195"
+                    src="./img/catalog/cart-mobile@1x.jpg"
+                    srcset="./img/catalog/cart-mobile@2x.jpg 2x"
+                    alt="Корзинка из ниток в которой лежит бельё."
+                  >
                 </picture>
               </a>
               <div class="goods__text">
@@ -117,8 +152,23 @@
             </li>
             <li class="goods__item goods__item--last">
               <a class="goods__link" href="#">
-                <picture class="goods__picture">
-                  <img class="goods__image" width="260" height="195" src="./img/catalog/toys.jpg" alt="Корзинка с игрушками.">
+                <picture>
+                  <source
+                    media="(min-width: 1150px)"
+                    srcset="./img/catalog/toys-computer@1x.jpg 1x, ./img/catalog/toys-computer@2x.jpg 2x"
+                  >
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./img/catalog/toys-tablet@1x.jpg 1x, ./img/catalog/toys-tablet@2x.jpg 2x"
+                  >
+                  <img
+                    class="goods__image"
+                    width="260"
+                    height="195"
+                    src="./img/catalog/toys-mobile@1x.jpg"
+                    srcset="./img/catalog/toys-mobile@2x.jpg 2x"
+                    alt="Корзинка с игрушками."
+                  >
                 </picture>
               </a>
               <div class="goods__text">
@@ -143,10 +193,26 @@
       <section class="presentation">
         <div class="presentation__container">
           <h2 class="visually-hidden">Видео с процессом производства</h2>
-          <picture class="presentation__video">
-            <!-- Картинка вместо видео -->
-            <img class="presentation__video-mobile" width="260" height="150" src="./img/catalog/video.jpg" alt="Видео с процессом производства.">
-          </picture>
+          <div class="presentation__video-container">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="./img/catalog/video-computer@1x.jpg 1x, ./img/catalog/video-computer@2x.jpg 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/catalog/video-tablet@1x.jpg 1x, ./img/catalog/video-tablet@2x.jpg 2x"
+              >
+              <img
+                class="presentation__video"
+                width="260"
+                height="150"
+                src="./img/catalog/video-mobile@1x.jpg"
+                srcset="./img/catalog/video-mobile@2x.jpg 2x"
+                alt="Видео с процессом производства."
+              >
+            </picture>
+          </div>
           <p class="presentation__title">Процесс<br> производства</p>
           <div class="presentation__footer-container">
             <p class="presentation__text">

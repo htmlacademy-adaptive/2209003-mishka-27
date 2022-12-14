@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка: форма заказа</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
     <script src="./js/burger.js" defer></script>
   </head>
   <body class="page__body">
@@ -28,8 +31,10 @@
             </div>
             <a class="navigation__logo link" href="./index.html">
               <span>
-                <picture class="navigation__logo-images">
-                  <img class="navigation__logo-image" width="86" height="35" src="./img/icons/logo.svg" alt="Логотип сайта 'Мишка'">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="./img/icons/logo-computer.svg">
+                  <source media="(min-width: 768px)" srcset="./img/icons/logo-tablet.svg">
+                  <img class="navigation__logo-image" width="86" height="35" src="./img/icons/logo-mobile.svg" alt="Логотип сайта 'Мишка'">
                 </picture>
               </span>
             </a>
