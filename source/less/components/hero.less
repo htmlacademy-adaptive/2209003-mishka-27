@@ -47,7 +47,7 @@
   color: @contrast-color;
 
   outline: none;
-  padding: 24px 30px 31px;
+  padding: 24px 30px 28px;
   transition: transform @animation-time;
 
   &--interior {
@@ -71,7 +71,7 @@
   }
 
   &--interior::before {
-    top: 30px;
+    top: 21px;
     right: 36px;
 
     background-image: url("../img/icons/interior.svg");
@@ -81,8 +81,8 @@
   }
 
   &--toys::before {
-    top: 32px;
-    right: 35px;
+    top: 23px;
+    right: 26px;
 
     background-image: url("../img/icons/toys.svg");
 
@@ -99,7 +99,7 @@
   &::after {
     position: absolute;
     inset: 0;
-    bottom: -10px;
+    bottom: 0;
     z-index: -1;
 
     background-color: @special-color;
@@ -231,6 +231,10 @@
   .hero__link {
     &--toys::before {
       right: 35px;
+    }
+
+    &::after {
+      bottom: -10px;
     }
   }
 }
