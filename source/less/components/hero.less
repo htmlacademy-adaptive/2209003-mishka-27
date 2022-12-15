@@ -1,5 +1,5 @@
 .hero {
-  background-color: #fafafa;
+  background-color: @hero-color;
 
   margin-bottom: 39px;
 }
@@ -160,6 +160,8 @@
   .hero__links-container {
     position: relative;
 
+    .container-width;
+
     &::before {
       position: absolute;
       right: 0;
@@ -177,8 +179,6 @@
 
   .hero__links {
     flex-direction: row;
-
-    .container-width;
   }
 
   .hero__link-container {
