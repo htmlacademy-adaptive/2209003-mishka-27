@@ -137,7 +137,7 @@
 // tablet
 @media (min-width: @tablet-container-width) {
   .hero {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .hero__title {
@@ -166,10 +166,10 @@
       position: absolute;
       right: 0;
       bottom: -21px;
-      left: -11px;
+      left: 0;
       z-index: 1;
 
-      background-image: url("../img/patterns/zigzag-fill-tablet.png");
+      background-image: url("../img/patterns/zigzag-fill-tablet.svg");
       background-repeat: repeat-x;
 
       height: 34px;
@@ -190,6 +190,10 @@
     line-height: 30px;
 
     padding: 25px 36px 34px;
+
+    &--interior::before {
+      top: 28px;
+    }
 
     &--toys::before {
       top: 31px;
