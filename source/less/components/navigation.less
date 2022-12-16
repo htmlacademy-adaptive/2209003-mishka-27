@@ -90,6 +90,7 @@
   .navigation__action-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .navigation__icon {
@@ -98,7 +99,7 @@
 
   .navigation__main-links {
     position: absolute;
-    bottom: -45px;
+    top: 100%;
     left: 0;
     // при изменение right посмотреть в .header__additionally-text
     right: 40%;
@@ -139,8 +140,11 @@
   }
 
   .navigation__main-link {
+    display: inline-block;
+
     font-size: 15px;
     padding: 19px 23px 19px 10px;
+    max-width: 50%;
 
     &--first {
       padding-left: 0;
@@ -150,14 +154,11 @@
 
 // computer
 @media (min-width: @computer-container-width) {
-  .navigation__menu {
-    align-items: center;
-  }
-
   .navigation__main-links {
     position: static;
 
     display: flex;
+    flex-wrap: wrap;
   }
 
   .navigation__main-link {
@@ -169,6 +170,7 @@
 
     padding: 29px 37px 27px 35px;
     border-left: 1px solid @border-color;
+    max-width: none;
 
     &--first {
       padding-left: 0;
@@ -193,7 +195,6 @@
 
   .navigation__extra-links {
     position: absolute;
-    bottom: -64px;
     left: 2px;
     // при изменение right посмотреть в .header__additionally-text
     right: 40%;
