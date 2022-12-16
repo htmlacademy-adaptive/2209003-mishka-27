@@ -7,7 +7,7 @@
   font-size: 13px;
   line-height: 24px;
 
-  margin-bottom: 29px;
+  margin-bottom: 21px;
   .container-width;
 }
 
@@ -19,6 +19,7 @@
   font-size: 14px;
   line-height: 16px;
 
+  margin: 0;
   margin-bottom: 30px;
 }
 
@@ -53,31 +54,29 @@
 }
 
 .order-form__type {
-  margin-bottom: 31px;
+  margin-bottom: 36px;
 }
 
 .order-form__color {
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 }
 
 .order-form__full-name {
-  margin-bottom: 35px;
+  margin-bottom: 2px;
 }
 
 .order-form__phone {
   position: relative;
+}
 
-  margin-bottom: 35px;
+.order-form__extra {
+  margin-bottom: 16px;
 }
 
 .order-form__email {
   position: relative;
 
-  margin-bottom: 35px;
-}
-
-.order-form__extra {
-  margin-bottom: 17px;
+  margin-bottom: 5px;
 }
 
 // subtitles
@@ -94,7 +93,7 @@
 
   margin: 0;
   padding: 0;
-  padding-right: 28px;
+  padding-right: 18px;
 }
 
 .order-form__subtitle-type {
@@ -150,7 +149,7 @@
 
   &::before {
     position: absolute;
-    left: -61px;
+    left: -62px;
     top: -14px;
 
     transition: all @order-form-input-animation-time;
@@ -180,7 +179,7 @@
 
   &::before {
     position: absolute;
-    left: -59px;
+    left: -61px;
     top: -11px;
 
     transition: all @order-form-input-animation-time;
@@ -259,7 +258,7 @@
   &::after {
     position: absolute;
     top: 0;
-    left: -51px;
+    left: -54px;
 
     background-image: url("../img/form-icons/checkbox-mobile-check-mark.svg");
     background-repeat: no-repeat;
@@ -302,8 +301,7 @@
 
   width: 100%;
   margin-bottom: 22px;
-  padding: 17px 23px;
-  padding-left: 0;
+  padding: 17px 23px 16px 0;
   border: none;
   border-bottom: 2px solid @bold-text-color;
 
@@ -317,6 +315,8 @@
     border: 2px solid @bold-text-color;
     padding: 17px;
     resize: none;
+    height: 142px;
+    margin-bottom: 0;
   }
 
   &:hover,
@@ -332,12 +332,20 @@
   &--phone ~ &-phone-icon,
   &--email ~ &-email-icon {
     position: absolute;
-    top: 49px;
-    right: 37px;
 
     color: fade(@black, 30%);
 
     transition: all @order-form-input-animation-time;
+  }
+
+  &--phone ~ &-phone-icon {
+    top: 38px;
+    right: 37px;
+  }
+
+  &--email ~ &-email-icon {
+    top: 46px;
+    right: 33px;
   }
 
   &--phone:hover ~ &-phone-icon,
