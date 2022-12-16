@@ -123,12 +123,30 @@
 // tablet
 @media (min-width: @tablet-container-width) {
   .goods {
-    margin: 67px 0 53px;
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 53px;
+    padding-top: 63px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      top: -24px;
+
+      background-image: url("../img/patterns/zigzag-fill-tablet.svg");
+
+      content: "";
+    }
   }
 
   .goods__item {
     display: flex;
     max-width: 100%;
+
+    margin-bottom: 55px;
   }
 
   .goods__image {
@@ -143,7 +161,7 @@
     justify-content: space-between;
 
     flex-grow: 1;
-    padding: 27px 39px 26px 34px;
+    padding: 29px 39px 21px 32px;
     border: 1px solid @border-color;
   }
 
@@ -165,6 +183,10 @@
 
   .goods__price {
     font-size: 17px;
+  }
+
+  .goods__buy {
+    right: -27px;
   }
 }
 
