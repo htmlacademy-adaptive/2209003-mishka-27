@@ -117,12 +117,10 @@
 
     border-left: 1px solid @border-color;
 
-    &--search {
-      padding: 36px 31px 34px 32px;
-    }
+    padding: 35px 31px 34px 32px;
 
     &--cart {
-      padding: 35px 0 35px 31px;
+      padding-right: 0;
     }
   }
 
@@ -152,9 +150,8 @@
 
 // computer
 @media (min-width: @computer-container-width) {
-  .navigation__logo-image {
-    width: 149px;
-    height: 72px;
+  .navigation__menu {
+    align-items: center;
   }
 
   .navigation__main-links {
@@ -170,7 +167,7 @@
 
     font-size: 17px;
 
-    padding: 33px 37px 32px 35px;
+    padding: 29px 37px 27px 35px;
     border-left: 1px solid @border-color;
 
     &--first {
@@ -180,13 +177,24 @@
   }
 
   .navigation__logo {
-    margin-right: 4px;
+    margin-right: 63px;
+  }
+
+  .navigation__logo-image {
+    width: 149px;
+    height: 72px;
+    margin-top: 7px;
+  }
+
+  .navigation__action-link {
+    padding-top: 25px;
+    padding-bottom: 27px;
   }
 
   .navigation__extra-links {
     position: absolute;
     bottom: -64px;
-    left: 0;
+    left: 2px;
     // при изменение right посмотреть в .header__additionally-text
     right: 40%;
 
