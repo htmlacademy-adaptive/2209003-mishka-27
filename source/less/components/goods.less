@@ -193,7 +193,17 @@
 // computer
 @media (min-width: @computer-container-width) {
   .goods {
-    margin: 111px 0 57px;
+    padding-top: 126px;
+    margin: 0;
+    margin-bottom: 57px;
+
+    &::before {
+      top: -19px;
+
+      background-image: url("../img/patterns/zigzag-fill-computer-catalog.svg");
+
+      height: 34px;
+    }
   }
 
   .goods__list {
@@ -222,6 +232,11 @@
   }
 
   .goods__description {
-    margin-bottom: 37px;
+    margin-bottom: 11px;
+  }
+
+  .goods__buy {
+    right: -23px;
+    top: 3px;
   }
 }
