@@ -19,9 +19,9 @@
 }
 
 .footer__social {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   justify-content: center;
-  flex-wrap: wrap;
 
   .reset-list;
   padding-bottom: 13px;
@@ -117,6 +117,8 @@
 
     transition: all @animation-time;
 
+    margin-top: 10px;
+
     &[href] {
       cursor: pointer;
     }
@@ -142,5 +144,12 @@
 
   .footer__outer-company-icon {
     right: -27px;
+  }
+}
+
+// computer
+@media (min-width: @computer-container-width) {
+  .footer__logo {
+    margin-top: 0;
   }
 }
