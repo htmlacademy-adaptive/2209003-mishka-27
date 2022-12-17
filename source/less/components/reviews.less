@@ -28,7 +28,7 @@
   color: @bold-text-color;
 
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .reviews__list {
@@ -52,7 +52,7 @@
   font-size: 17px;
   margin: 0;
 
-  margin-bottom: 33px;
+  margin-bottom: 25px;
 }
 
 .reviews__buttons {
@@ -148,6 +148,7 @@
 
     padding-top: 83px;
     margin-bottom: 39px;
+    max-width: 600px;
   }
 
   .reviews__text {
@@ -162,6 +163,8 @@
   }
 
   .reviews__id {
+    font-size: 17px;
+
     margin-bottom: 0;
   }
 
@@ -173,7 +176,7 @@
 
   .reviews__writing-button {
     position: absolute;
-    top: 83px;
+    top: 79px;
     right: @tablet-container-indent;
 
     width: 175px;
@@ -197,18 +200,42 @@
 // computer
 @media (min-width: @computer-container-width) {
   .reviews {
-    padding-bottom: 90px;
-    margin-bottom: 150px;
+    padding-bottom: 136px;
+    margin-bottom: 151px;
   }
 
   .reviews__container {
     padding-left: @left-indent-for-computer;
 
     &::before {
-      bottom: -90px;
+      bottom: -136px;
 
       background-image: url("../img/patterns/zigzag-computer.svg");
       height: 23px;
     }
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    margin-bottom: 31px;
+  }
+
+  .reviews__writing-button {
+    right: -2px;
+  }
+
+  .reviews__text {
+    margin-bottom: 42px;
+  }
+
+  .reviews__source {
+    font-size: 17px;
+  }
+
+  .reviews__buttons {
+    right: 0;
+    bottom: -4px;
   }
 }

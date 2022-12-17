@@ -68,7 +68,7 @@
   &--likes::before,
   &--gift-wrap::before {
     position: absolute;
-    bottom: calc(100% + 18px);
+    top: -57px;
     left: 0;
 
     background-repeat: no-repeat;
@@ -86,7 +86,8 @@
   }
 
   &--tied-toy::before {
-    left: -3px;
+    top: -54px;
+    left: 4px;
 
     background-image: url("../img/about-us/clew.svg");
 
@@ -102,6 +103,7 @@
   }
 
   &--support::before {
+    top: -54px;
     left: -6px;
 
     background-image: url("../img/about-us/rocket.svg");
@@ -111,6 +113,7 @@
   }
 
   &--likes::before {
+    top: -51px;
     left: 7px;
 
     background-image: url("../img/about-us/heart.svg");
@@ -145,6 +148,10 @@
 
 // tablet
 @media (min-width: @tablet-container-width) {
+  .about-us__list {
+    column-gap: 59px;
+  }
+
   .about-us {
     margin-bottom: 83px;
   }
@@ -184,6 +191,15 @@
 
   .about-us__container {
     padding-left: @left-indent-for-computer;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about-us__list {
+    grid-template-columns: repeat(2, 293px);
   }
 
   .about-us__item {

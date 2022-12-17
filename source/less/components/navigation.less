@@ -35,8 +35,8 @@
   text-decoration: none;
   color: @bold-text-color;
 
-  padding: 28px 27px;
-  padding-left: 72px;
+  padding: 27px 27px;
+  padding-left: 79px;
 
   box-shadow:
     0 1px 0 @border-color,
@@ -53,7 +53,7 @@
 
 .navigation__icon {
   position: absolute;
-  left: 36px;
+  left: 33px;
   top: 29px;
 
   color: fade(@bold-text-color, 20%);
@@ -84,11 +84,13 @@
   .navigation__logo-image {
     width: 113px;
     height: 46px;
+    margin-top: 15px;
   }
 
   .navigation__action-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .navigation__icon {
@@ -97,7 +99,7 @@
 
   .navigation__main-links {
     position: absolute;
-    bottom: -45px;
+    top: 100%;
     left: 0;
     // при изменение right посмотреть в .header__additionally-text
     right: 40%;
@@ -116,12 +118,10 @@
 
     border-left: 1px solid @border-color;
 
-    &--search {
-      padding: 36px 31px 34px 32px;
-    }
+    padding: 35px 31px 34px 32px;
 
     &--cart {
-      padding: 35px 0 35px 31px;
+      padding-right: 0;
     }
   }
 
@@ -140,8 +140,11 @@
   }
 
   .navigation__main-link {
+    display: inline-block;
+
     font-size: 15px;
-    padding: 19px 23px 19px 22px;
+    padding: 19px 23px 19px 10px;
+    max-width: 50%;
 
     &--first {
       padding-left: 0;
@@ -151,15 +154,11 @@
 
 // computer
 @media (min-width: @computer-container-width) {
-  .navigation__logo-image {
-    width: 149px;
-    height: 72px;
-  }
-
   .navigation__main-links {
     position: static;
 
     display: flex;
+    flex-wrap: wrap;
   }
 
   .navigation__main-link {
@@ -169,8 +168,9 @@
 
     font-size: 17px;
 
-    padding: 33px 37px 32px 35px;
+    padding: 29px 37px 27px 35px;
     border-left: 1px solid @border-color;
+    max-width: none;
 
     &--first {
       padding-left: 0;
@@ -179,13 +179,23 @@
   }
 
   .navigation__logo {
-    margin-right: 4px;
+    margin-right: 63px;
+  }
+
+  .navigation__logo-image {
+    width: 149px;
+    height: 72px;
+    margin-top: 7px;
+  }
+
+  .navigation__action-link {
+    padding-top: 25px;
+    padding-bottom: 27px;
   }
 
   .navigation__extra-links {
     position: absolute;
-    bottom: -64px;
-    left: 0;
+    left: 2px;
     // при изменение right посмотреть в .header__additionally-text
     right: 40%;
 

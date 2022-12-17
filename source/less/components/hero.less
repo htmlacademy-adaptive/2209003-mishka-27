@@ -1,5 +1,5 @@
 .hero {
-  background-color: #fafafa;
+  background-color: @hero-color;
 
   margin-bottom: 39px;
 }
@@ -47,7 +47,7 @@
   color: @contrast-color;
 
   outline: none;
-  padding: 24px 30px 31px;
+  padding: 24px 30px 28px;
   transition: transform @animation-time;
 
   &--interior {
@@ -71,7 +71,7 @@
   }
 
   &--interior::before {
-    top: 30px;
+    top: 21px;
     right: 36px;
 
     background-image: url("../img/icons/interior.svg");
@@ -81,8 +81,8 @@
   }
 
   &--toys::before {
-    top: 32px;
-    right: 35px;
+    top: 23px;
+    right: 26px;
 
     background-image: url("../img/icons/toys.svg");
 
@@ -91,27 +91,8 @@
   }
 
   // hover
-  &:hover,
+  &:hover::before,
   &:focus-visible {
-    transform: translateY(-5px);
-  }
-
-  &::after {
-    position: absolute;
-    inset: 0;
-    bottom: -10px;
-    z-index: -1;
-
-    background-color: @special-color;
-
-    content: "";
-  }
-
-  &--toys::after {
-    background-color: @special-darker-color;
-  }
-
-  &:hover::before {
     opacity: 1;
   }
 
@@ -137,7 +118,23 @@
 // tablet
 @media (min-width: @tablet-container-width) {
   .hero {
-    margin-bottom: 40px;
+    position: relative;
+
+    margin-bottom: 50px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      z-index: 1;
+
+      background-image: url("../img/patterns/zigzag-fill-tablet.svg");
+      background-repeat: repeat-x;
+
+      height: 24px;
+      content: "";
+    }
   }
 
   .hero__title {
@@ -158,27 +155,11 @@
   }
 
   .hero__links-container {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      right: 0;
-      bottom: -21px;
-      left: -11px;
-      z-index: 1;
-
-      background-image: url("../img/patterns/zigzag-fill-tablet.png");
-      background-repeat: repeat-x;
-
-      height: 34px;
-      content: "";
-    }
+    .container-width;
   }
 
   .hero__links {
     flex-direction: row;
-
-    .container-width;
   }
 
   .hero__link-container {
@@ -191,9 +172,19 @@
 
     padding: 25px 36px 34px;
 
+    &--interior::before {
+      top: 28px;
+    }
+
     &--toys::before {
       top: 31px;
       right: 33px;
+    }
+
+    // hover
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-5px);
     }
   }
 }
@@ -202,6 +193,13 @@
 @media (min-width: @computer-container-width) {
   .hero {
     margin-bottom: 71px;
+
+    &::before {
+      left: -50px;
+      bottom: -2px;
+
+      background-image: url("../img/patterns/zigzag-fill-computer.svg");
+    }
   }
 
   .hero__text-container {
@@ -222,15 +220,13 @@
     margin: 0 auto;
   }
 
-  .hero__links-container {
-    &::before {
-      background-image: url("../img/patterns/zigzag-fill-computer.png");
-    }
-  }
-
   .hero__link {
     &--toys::before {
       right: 35px;
+    }
+
+    &::after {
+      bottom: -10px;
     }
   }
 }
