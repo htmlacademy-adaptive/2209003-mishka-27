@@ -1,45 +1,28 @@
 import gulp from 'gulp';
-import plumber from 'gulp-plumber';
-import less from 'gulp-less';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
 
-// Styles
+// commons
+import deleteDest from './gulp/tasks/common/deleteDest.js';
+import copyExtraFiles from './gulp/tasks/common/copyExtraFiles.js';
+import copyFonts from './gulp/tasks/common/copyFonts.js';
 
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
-
-// Server
-
-const server = (done) => {
-  browser.init({
-    server: {
-      baseDir: 'source'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-}
-
+// delelopment
+import copyHtml from './gulp/tasks/development/copyHtml.js';
+import createStyles from './gulp/tasks/development/createStyles.js';
+import startServer from './gulp/tasks/development/startServer.js';
+import startWatcher from './gulp/tasks/development/startWatcher.js';
+import copyImages from './gulp/tasks/development/copyImages.js';
+import copyScripts from './gulp/tasks/development/copyScripts.js';
 
 export default gulp.series(
-  styles, server, watcher
+  deleteDest,
+  gulp.parallel(
+    copyHtml,
+    createStyles,
+    copyImages,
+    copyScripts,
+    copyExtraFiles,
+    copyFonts,
+  ),
+  startServer,
+  startWatcher,
 );
