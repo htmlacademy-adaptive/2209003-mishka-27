@@ -3,7 +3,7 @@ import imagemin from 'gulp-imagemin';
 import settings from './../../settings.js';
 
 const optimizeImages = () => {
-  return gulp.src(`${settings.src}/img/**/*.{jpg,jpeg,png,svg,gif}`)
+  return gulp.src([`${settings.src}/img/**/*.{jpg,jpeg,png,svg,gif}`, `!${settings.sprite}/**/*.svg`])
     .pipe(imagemin())
     .pipe(gulp.dest(`${settings.dest}/img`));
 };
