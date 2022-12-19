@@ -1,12 +1,21 @@
 import gulp from 'gulp';
-import settings from '../../settings.js';
-import createStyles from './createStyles.js';
 import browser from 'browser-sync';
+import settings from '../../settings.js';
+
+// tasks
+import copyHtml from './copyHtml.js';
+import createStyles from './createStyles.js';
 
 const startWatcher = () => {
   gulp.watch(`${settings.src}/less/**/*.less`, gulp.series(createStyles));
-  gulp.watch(`${settings.src}/*.html`).on('change', browser.reload);
-  gulp.watch(`${settings.src}/**/*.svg`).on('change', browser.reload);
+  gulp.watch(`${settings.src}/*.html`).on('change', () => {
+    copyHtml();
+    browser.reload();
+  });
+  gulp.watch(`${settings.src}/**/*.svg`).on('change', () => {
+    createStyles();
+    browser.reload();
+  });
 }
 
 export default startWatcher;

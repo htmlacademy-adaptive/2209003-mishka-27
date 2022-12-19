@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import deleteDest from './gulp/tasks/common/deleteDest.js';
 import copyExtraFiles from './gulp/tasks/common/copyExtraFiles.js';
 import copyFonts from './gulp/tasks/common/copyFonts.js';
+import createNewImage from './gulp/tasks/common/createNewImages.js';
 
 // delelopment
 import copyHtml from './gulp/tasks/development/copyHtml.js';
@@ -22,6 +23,7 @@ export default gulp.series(
     copyScripts,
     copyExtraFiles,
     copyFonts,
+    createNewImage,
   ),
   startServer,
   startWatcher,
