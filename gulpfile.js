@@ -37,12 +37,14 @@ export default gulp.series(
 import optimizeHtml from './gulp/tasks/production/optimizeHtml.js';
 import optimizeStyles from './gulp/tasks/production/optimizeStyles.js';
 import optimizeImages from './gulp/tasks/production/optimizeImages.js';
+import optimizeJs from './gulp/tasks/production/optimizeJs.js';
 
 export const build = gulp.series(
   deleteDest,
   gulp.parallel(
     optimizeHtml,
     optimizeStyles,
+    optimizeJs,
     optimizeImages,
     createSprite,
     copyExtraFiles,
