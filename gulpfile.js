@@ -5,6 +5,7 @@ import deleteDest from './gulp/tasks/common/deleteDest.js';
 import copyExtraFiles from './gulp/tasks/common/copyExtraFiles.js';
 import copyFonts from './gulp/tasks/common/copyFonts.js';
 import createSprite from './gulp/tasks/common/createSprite.js';
+import createNewImage from './gulp/tasks/common/createNewImages.js';
 import startServer from './gulp/tasks/common/startServer.js';
 
 // delelopment
@@ -13,7 +14,6 @@ import copyImages from './gulp/tasks/development/copyImages.js';
 import copySvg from './gulp/tasks/development/copySvg.js';
 import copyScripts from './gulp/tasks/development/copyScripts.js';
 import createStyles from './gulp/tasks/development/createStyles.js';
-import createNewImage from './gulp/tasks/development/createNewImages.js';
 import startWatcher from './gulp/tasks/development/startWatcher.js';
 
 export default gulp.series(
@@ -47,6 +47,7 @@ export const build = gulp.series(
     optimizeJs,
     optimizeImages,
     createSprite,
+    createNewImage,
     copyExtraFiles,
     copyFonts,
   ),
