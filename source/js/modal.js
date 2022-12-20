@@ -1,6 +1,6 @@
-{
-  'use strict';
+'use strict';
 
+{
   const modal = document.querySelector('.modal');
   const buttons = document.querySelectorAll('[data-modal="open"]');
   const CLASS_FOR_OPEN = 'modal--open';

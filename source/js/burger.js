@@ -1,6 +1,6 @@
-{
-  'use strict';
+'use strict';
 
+{
   const button = document.querySelector('.header__burger');
   const CLASS_FOR_ACTIVE_BUTTON = 'header__burger--active';
   const linkLists = document.querySelectorAll('.navigation__menu-links');

@@ -1,6 +1,6 @@
-{
-  'use strict';
+'use strict';
 
+{
   const center = [59.938635, 30.323118];
 
   ymaps.ready(() => {
