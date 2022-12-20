@@ -1,45 +1,55 @@
 import gulp from 'gulp';
-import plumber from 'gulp-plumber';
-import less from 'gulp-less';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
 
-// Styles
+// commons
+import deleteDest from './gulp/tasks/common/deleteDest.js';
+import copyExtraFiles from './gulp/tasks/common/copyExtraFiles.js';
+import copyFonts from './gulp/tasks/common/copyFonts.js';
+import createSprite from './gulp/tasks/common/createSprite.js';
+import createNewImage from './gulp/tasks/common/createNewImages.js';
+import startServer from './gulp/tasks/common/startServer.js';
 
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
-
-// Server
-
-const server = (done) => {
-  browser.init({
-    server: {
-      baseDir: 'source'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-}
-
+// delelopment
+import copyHtml from './gulp/tasks/development/copyHtml.js';
+import copyImages from './gulp/tasks/development/copyImages.js';
+import copySvg from './gulp/tasks/development/copySvg.js';
+import copyScripts from './gulp/tasks/development/copyScripts.js';
+import createStyles from './gulp/tasks/development/createStyles.js';
+import startWatcher from './gulp/tasks/development/startWatcher.js';
 
 export default gulp.series(
-  styles, server, watcher
+  deleteDest,
+  gulp.parallel(
+    createNewImage,
+    createStyles,
+    createSprite,
+    copyHtml,
+    copyImages,
+    copySvg,
+    copyScripts,
+    copyExtraFiles,
+    copyFonts,
+  ),
+  startServer,
+  startWatcher,
+);
+
+// production
+import optimizeHtml from './gulp/tasks/production/optimizeHtml.js';
+import optimizeStyles from './gulp/tasks/production/optimizeStyles.js';
+import optimizeImages from './gulp/tasks/production/optimizeImages.js';
+import optimizeJs from './gulp/tasks/production/optimizeJs.js';
+
+export const build = gulp.series(
+  deleteDest,
+  gulp.parallel(
+    optimizeHtml,
+    optimizeStyles,
+    optimizeJs,
+    optimizeImages,
+    createSprite,
+    createNewImage,
+    copyExtraFiles,
+    copyFonts,
+  ),
+  startServer,
 );

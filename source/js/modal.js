@@ -1,4 +1,4 @@
-(function() {
+{
   'use strict';
 
   const modal = document.querySelector('.modal');
@@ -38,4 +38,4 @@
   });
 
   closeButton.addEventListener('click', closeModal);
-})();
+}

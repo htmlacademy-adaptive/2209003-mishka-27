@@ -1,4 +1,4 @@
-(function () {
+{
   'use strict';
 
   const button = document.querySelector('.header__burger');
@@ -57,4 +57,4 @@
       resetButtonAndLists();
     }
   });
-})();
+}
