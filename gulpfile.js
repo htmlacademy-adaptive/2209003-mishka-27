@@ -7,6 +7,7 @@ import copyFonts from './gulp/tasks/common/copyFonts.js';
 import createSprite from './gulp/tasks/common/createSprite.js';
 import createNewImage from './gulp/tasks/common/createNewImages.js';
 import startServer from './gulp/tasks/common/startServer.js';
+import optimizeWebManifest from './gulp/tasks/common/optimizeWebManifest.js';
 
 // delelopment
 import copyHtml from './gulp/tasks/development/copyHtml.js';
@@ -28,6 +29,7 @@ export default gulp.series(
     copyScripts,
     copyExtraFiles,
     copyFonts,
+    optimizeWebManifest,
   ),
   startServer,
   startWatcher,
@@ -50,6 +52,7 @@ export const build = gulp.series(
     createNewImage,
     copyExtraFiles,
     copyFonts,
+    optimizeWebManifest,
   ),
   startServer,
 );
