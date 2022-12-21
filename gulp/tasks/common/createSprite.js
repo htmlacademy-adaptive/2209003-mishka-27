@@ -5,7 +5,7 @@ import settings from '../../settings.js';
 import rename from 'gulp-rename';
 
 const createSprite = () => {
-  return gulp.src(`${settings.sprite}/**/*.svg`)
+  return gulp.src(`${settings.spriteFiles}`)
     .pipe(imagemin())
     .pipe(svgStore({
       inlineSvg: true,

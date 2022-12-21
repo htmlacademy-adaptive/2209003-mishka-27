@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import settings from './../../settings.js';
 
-const extraFilesPaths = settings.extra;
+const extraFilesPaths = settings.extraFiles;
 
 const copyExtraFiles = (done) => {
   extraFilesPaths.forEach((file) => {
