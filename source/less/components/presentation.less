@@ -37,33 +37,35 @@
 .presentation__video-container {
   position: relative;
 
+  margin-bottom: 35px;
+}
+
+.presentation__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-family: inherit;
+
+  background-image: url("../img/icons/play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  transition: all @animation-time;
   cursor: pointer;
 
-  margin-bottom: 35px;
+  width: 109px;
+  height: 85px;
+  border: none;
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    background-image: url("../img/icons/play.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    transform: translate(-50%, -50%);
-    transform-origin: center;
-    transition: all @animation-time;
-
-    width: 109px;
-    height: 85px;
-    content: "";
-  }
-
-  &:hover::before {
+  &:hover {
     transform: translate(-50%, -50%) scale(1.2);
   }
 
-  &:active::before {
+  &:active {
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0.3;
   }

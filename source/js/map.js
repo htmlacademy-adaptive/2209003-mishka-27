@@ -4,6 +4,9 @@
   const yandexMapScript = document.createElement('script');
   yandexMapScript.src = 'https://api-maps.yandex.ru/2.1/?apikey=8ccf966d-4b67-49bd-8aa1-a436d485e6c7&lang=ru_RU';
   yandexMapScript.onload = () => {
+    // clean map container
+    document.querySelector('#map').querySelector('img').remove();
+
     const center = [59.938635, 30.323118];
 
     ymaps.ready(() => {
