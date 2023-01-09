@@ -6,6 +6,7 @@ import settings from '../../settings.js';
 import copyHtml from './copyHtml.js';
 import createStyles from './createStyles.js';
 import copySvg from './copySvg.js';
+import copyScripts from './copyScripts.js';
 
 const startWatcher = () => {
   gulp.watch(`${settings.src}/less/**/*.less`, gulp.series(createStyles));
@@ -15,6 +16,10 @@ const startWatcher = () => {
   });
   gulp.watch(`${settings.src}/**/*.svg`).on('change', () => {
     copySvg();
+    browser.reload();
+  });
+  gulp.watch(`${settings.src}/**/*.js`).on('change', () => {
+    copyScripts();
     browser.reload();
   });
 }
